@@ -1,7 +1,7 @@
 # **Hyper-Parameter Tuning of Neural Networks**
 
 ## **Overview**
-This section describes the methodology used for evaluating a neural network model trained with **22 control point coordinates** as inputs. The outputs consist of interpolated pressure \( p \), \(\tau_1\), and \(\tau_2\). The number of interpolation points varies between **100** and **200** for each surface to evaluate the effect of data size on model accuracy under unseen test data. The influence of the dataset size on model accuracy is also explored.
+This section describes the methodology used for evaluating a neural network model trained with **22 control point coordinates** as inputs. The outputs consist of interpolated pressure $p $, $\tau_1$, and $\tau_2$. The number of interpolation points varies between **100** and **200** for each surface to evaluate the effect of data size on model accuracy under unseen test data. The influence of the dataset size on model accuracy is also explored.
 
 ---
 
@@ -57,14 +57,14 @@ where:
 ---
 
 ### **Key Observations:**
-1. For the \( \tau_2 \) model, the \( R^2 \) score remained low until the dataset size reached **640**, indicating that more data was required due to significant non-linearities in \(\tau_2\).
-2. **Relative \( L2 \)-Norm Error** was computed using solver-interpolated data as a reference, which provided better insights into the dependence of model accuracy on dataset size.
+1. For the $ \tau_2$ model, the $R^2$ score remained low until the dataset size reached **640**, indicating that more data was required due to significant non-linearities in $\tau_2$.
+2. **Relative $L2$ -Norm Error** was computed using solver-interpolated data as a reference, which provided better insights into the dependence of model accuracy on dataset size.
 
 ---
 
 ## **5. Results and Comparisons**
 
-Below are visualizations comparing **\( R^2 \) contours** for models trained with dataset sizes of **1280** and **2560** (full dataset):
+Below are visualizations comparing **$R^2$ contours** for models trained with dataset sizes of **1280** and **2560** (full dataset):
 
 ### **Model Comparisons:**
 - **Figure 1:** Model performance for a dataset size of only **20 cases**.
@@ -73,7 +73,7 @@ Below are visualizations comparing **\( R^2 \) contours** for models trained wit
 ---
 
 ## **6. Conclusion**
-- Neural networks trained for \( p \), \(\tau_1\), and \(\tau_2\) require separate architectures due to differences in complexity.
+- Neural networks trained for $p$, $\tau_1$, and $\tau_2$ require separate architectures due to differences in complexity.
 - Increasing the **dataset size** significantly improves the performance, especially for complex quantities like \(\tau_2\).
 - Tuning the number of layers and neurons improved the model’s ability to generalize, especially for **interpolation points ranging from 100 to 200**.
 
