@@ -66,11 +66,6 @@ where:
 
 Below are visualizations comparing **$R^2$ contours** for models trained with dataset sizes of **1280** and **2560** (full dataset):
 
-### **Model Comparisons:**
-- **Figure 1:** Model performance for a dataset size of only **20 cases**.
-- **Figure 2:** Comparison with models trained on the **full dataset**.
-
----
 
 ## **6. Conclusion**
 - Neural networks trained for $p$, $\tau_1$, and $\tau_2$ require separate architectures due to differences in complexity.
