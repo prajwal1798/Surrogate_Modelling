@@ -17,7 +17,7 @@ The following table lists the **constant model configuration parameters** during
 | Activation Function          | ReLU                    |
 | Loss Function                | Quadratic               |
 | Stopping Criteria            | Early Stopping          |
-| Tolerance (\( \epsilon \))   | \( 10^{-3} \)           |
+| Tolerance (\( \epsilon \))   | ![equation](https://latex.codecogs.com/svg.image?\color{White}10^{-3}) |
 | Number of Inputs             | 22 (Control point coordinates) |
 | Number of Outputs            | {200, 100} (\( p \), \(\tau_1\), and \(\tau_2\)) |
 
@@ -29,15 +29,15 @@ The following table summarizes the **hyperparameters** that were tuned and the c
 
 | **Hyperparameter** | **Tuned Values**                     | **Comments**                |
 |--------------------|---------------------------------------|-----------------------------|
-| Number of Layers   | \(\{1, 2, 3, 4, 5\}\)                 | Increasing model complexity |
-| Neurons per Layer  | \(\{10, 20, 30, \ldots, 200\}\)       | Increasing model capacity   |
-| Dataset Size       | \(\{20, 40, 60, \ldots, 2560\}\)      | Varying amounts of training data |
+| Number of Layers   | ![equation](https://latex.codecogs.com/svg.image?\color{White}\{1,2,3,4,5\}) | Increasing model complexity |
+| Neurons per Layer  | ![equation](https://latex.codecogs.com/svg.image?\color{White}\{10,20,30,...,200\}) | Increasing model capacity   |
+| Dataset Size       | ![equation](https://latex.codecogs.com/svg.image?\color{White}\{20,40,60,...,2560\}) | Varying amounts of training data |
 
 ---
 
 ## **3. Model Training and Evaluation**
 
-Based on the **hyperparameter tuning**, separate neural networks were trained for \( p \), \(\tau_1\), and \(\tau_2\) since these physical quantities differ in complexity and behavior. A detailed analysis of the chosen architecture can be found in \cite{balla2021}, where the reduction in the mean error value for the given architecture is demonstrated.
+Based on the **hyperparameter tuning**, separate neural networks were trained for \( p \), \(\tau_1\), and \(\tau_2\) since these physical quantities differ in complexity and behavior. A detailed analysis of the chosen architecture can be found in [Balla et al., 2021], where the reduction in the mean error value for the given architecture is demonstrated.
 
 Each trained model was saved, and predictions were performed on the **test set** to evaluate performance.
 
@@ -47,9 +47,7 @@ Each trained model was saved, and predictions were performed on the **test set**
 
 The performance of the trained neural network is assessed using the **\( R^2 \) score**, defined as:
 
-\[
-R^2 = 1 - \frac{\sum_{i=1}^n (y_i - \hat{y}_i)^2}{\sum_{i=1}^n (y_i - \bar{y})^2}
-\]
+![equation](https://latex.codecogs.com/svg.image?\color{White}R^2%20=%201%20-%20\frac{\sum_{i=1}^n%20(y_i%20-%20\hat{y}_i)^2}{\sum_{i=1}^n%20(y_i%20-%20\bar{y})^2})
 
 where:
 - \( y_i \) represents the actual values.
